@@ -1,0 +1,121 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+
+}
+
+android {
+     namespace 'com.advantech.uvc'
+    //namespace 'http://schemas.android.com/apk/res-auto'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.advantech.uvc"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8" // Set the JVM target compatibility to Java 1.8
+    }
+    buildFeatures {
+        mlModelBinding true
+    }
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+
+    }
+    packagingOptions {
+        pickFirst  'META-INF/*'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation ('androidx.appcompat:appcompat:1.6.1'){
+        exclude group: 'com.android.support',module:'support-compat'
+        exclude group:'com.google.guava', module: 'guava-jdk5'
+        /* exclude group: 'androidx.core',module:'core'*/
+    }
+
+
+
+
+// New version
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    if (true){
+        implementation ('io.agora.rtc:full-sdk:3.4.7.3'){
+            exclude group:'com.google.guava', module: 'guava-jdk5'
+        }
+
+    }else{
+        def agora_sdk_version = "4.3.0"
+        // case 1: full libs
+        implementation "io.agora.rtc:full-sdk:${agora_sdk_version}"
+        implementation "io.agora.rtc:full-screen-sharing:${agora_sdk_version}"
+    }
+
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+    //
+    implementation 'com.github.getActivity:XXPermissions:13.5'
+    implementation project(':libuvccamera')
+    implementation 'androidx.core:core-ktx:+'
+    implementation ('cn.hutool:hutool-core:5.8.26')
+    implementation 'commons-codec:commons-codec:1.16.0'
+    /* implementation 'com.herohan:UVCAndroid:1.0.5'*/
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //TextTextRecognizer
+    implementation ("com.google.firebase:firebase-ml-vision:24.0.3")
+
+    //==========================================
+
+    implementation ('com.google.api-client:google-api-client-android:1.23.0') {
+        exclude group:'com.google.http-client', module: 'httpclient'
+        exclude  module: 'guava-jdk5'
+    }
+    implementation ('com.google.http-client:google-http-client-gson:1.23.0') {
+        exclude group:'com.google.http-client', module: 'httpclient'
+        exclude  module: 'guava-jdk5'
+    }
+    implementation("com.google.guava:guava:33.1.0-android"){
+
+    }
+    implementation ('com.google.apis:google-api-services-vision:v1-rev369-1.23.0'){
+        exclude  module: 'guava-jdk5'
+    }
+
+
+    //BarCode Scanner
+    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0'
+
+    //New GCV Lib
+    implementation ('com.google.cloud:google-cloud-vision:3.34.0')
+}
+

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">HearSight</string>
+    <!-- <string name="agora_app_id" translatable="false">5bffe0a0b95345bd98ff16f92b06b32c</string>
+    <string name="agora_temp_token" translatable="false">007eJxTYHjUI/f20QUTtfxd0jPTMkJW5Qskltw7+nF+b5kK5wUPu80KDClJZokpaRbGqSZGSSbmRokWRkYmqSaWZuZpJslphsYW7zcfSW0IZGTYek6YmZEBAkF8PgaP1MSi4Mz0jBLH9PyiRAYGAPi8JH0=</string>
+    <string name="channel_name" translatable="false">HearSightAgora</string>
+    <string name="primary_certificate" translatable="false">c11056d751b6486296e067183126b45d</string>-->
+    <!-- <string name="agora_token" translatable="false">007eJxSYDh8gJHNoYq7XJ5dWVmOe0VT1m21KTP4Js5/v+3d4xWTlk5RYEhJMktMSbMwTjUxSjIxN0q0MDIySTWxNDNPM0lOMzS2CG48nNoQyMgQfDGbgZGBkYGFgZEBxGcCk8xgkgVM8jF4pCYWBWemZ5Q4pucXJXIyZKQmFhWD+IAAAAD//6X6KEM=</string>-->
+
+    <string name="agora_app_id" translatable="false">5bffe0a0b95345bd98ff16f92b06b32c</string>
+    <!-- Obtain a temp Access Token at https://dashboard.agora.io -->
+    <!-- You will need to deploy your own token server for production release -->
+    <!-- Leave this value empty if Security keys/Token is not enabled for your project -->
+    <string name="google_visio_api_key" translatable="false">AIzaSyDu6y_VWbtdKt_ALvYxZ2tQcQP5-pVH1ds</string>
+    <string name="agora_access_token1" translatable="false">007eJxTYNhwIywj9AvvHlM3o+WlHqf4ireGlJoxlj4ss5jwrP7PCW8FBtOktLRUg0SDJEtTYxPTpBRLi7Q0Q7M0S6MkA7MkY6NkufU3UhsCGRkCfoYyMEIhiM/KkJKak1jJwAAAclAgOA==</string>
+    <string name="channel" translatable="false">testcall</string>
+    <string name="agora_access_token2" translatable="false">007eJxTYPjE3/TPS9HCa5Lp3bJrTnuzSz+lNHU2xr6OMuIL/m/vdkCBwTQpLS3VINEgydLU2MQ0KcXSIi3N0CzN0ijJwCzJ2Cj51q+bqQ2BjAyMNpNYgCQYgvgcDCWpxSXJiTk5DAwA/rYh7A==</string>
+    <string name="agora_access_token" translatable="false">007eJxTYNBdclFR8dOtxO98Fw+sTAhmddumWrDPe96irc2ykg0vj35TYDBNSktLNUg0SLI0NTYxTUqxtEhLMzRLszRKMjBLMjZK/qh1N7UhkJFha6QeAyMUgvgcDCWpxSXJiTk5DAwAMqcifA==</string>
+</resources>
